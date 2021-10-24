@@ -1,12 +1,8 @@
-package com.locnv2005110007.Tuan5;
-
+package com.locnv2005110007.Tuan6;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
-
 public class SanPhamTestDrive {
-
-    
     static ArrayList<SanPham> listSp = new ArrayList<>();
     
     static void nhap(){
@@ -116,4 +112,3 @@ public class SanPhamTestDrive {
         } while(true);
     }
 }
-

@@ -6,12 +6,12 @@ public class Bai3 {
 
         DecimalFormat decimalFormat = new DecimalFormat("#.###");    // làm tròn đến 3 chữ số thập phân
         Scanner scanner = new Scanner(System.in) ;
-        System.out.print("Enter the edge of the cube : ");
-        double edge = scanner.nextDouble();
-        System.out.println("Entered edge is "+edge+"");
+        System.out.print("nhap canh cua khoi lap phuong : ");
+        double canh = scanner.nextDouble();
+        System.out.println("canh da nhap la "+canh+"");
 
-        double volume = Math.pow(edge,3);
+        double theTich = Math.pow(canh,3);
 
-        System.out.println("Volume of the cube : "+decimalFormat.format(volume));
+        System.out.println("the tich khoi lap phuong : "+decimalFormat.format(theTich));
     }
 }

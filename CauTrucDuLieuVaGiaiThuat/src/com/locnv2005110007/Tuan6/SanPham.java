@@ -1,4 +1,4 @@
-package com.locnv2005110007.Tuan5;
+package com.locnv2005110007.Tuan6;
 
 public class SanPham {
     String tenSp ;
@@ -30,5 +30,4 @@ public class SanPham {
       System.out.println("Thuế nhập khẩu : "+thueNhapKhau);
     }
 }   
-    
-   
+
