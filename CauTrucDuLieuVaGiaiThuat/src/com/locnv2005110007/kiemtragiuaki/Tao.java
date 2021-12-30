@@ -5,7 +5,9 @@ public class Tao {
     double khoiLuong;
     String mauSac;
 
-    Tao(){}
+    Tao(){
+
+    }
 
     
     Tao(String maTao,double khoiLuongTao,String mauSacTao){
@@ -16,7 +18,9 @@ public class Tao {
 
     void inDanhSachTao(){
         System.out.println("Mã Táo: "+ma);
+        
         System.out.println("khối lượng táo: "+khoiLuong);
+
         System.out.println("Màu sắc: "+mauSac);
     }
 }

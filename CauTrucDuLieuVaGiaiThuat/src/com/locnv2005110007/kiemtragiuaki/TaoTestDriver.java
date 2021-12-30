@@ -44,18 +44,19 @@ public class TaoTestDriver {
     public static void main(String[] args) {
         int suLuaChon;
         do{
-            System.out.println("------------------MENU------------------");
+            System.out.println("*****************MENU*****************");
             System.out.println("1. Thêm táo vào kho.");
             System.out.println("2. Tìm táo theo màu.");
             System.out.println("3. In danh sách táo.");
             System.out.print("Chọn chức năng: ");
-            System.out.println("------------------MENU------------------");
+            System.out.println("*****************MENU*****************");
             suLuaChon = scanner.nextInt();
             switch(suLuaChon){
                 case 1:themTao();break;
                 case 2:timTaoTheoMau(); break;
                 case 3:inThongTin();break;
                 default: System.out.println("kết thúc chương trình");
-            }}while(suLuaChon >= 1 && suLuaChon <= 3);
+            }
+        }while(suLuaChon >= 1 && suLuaChon <= 3);
     }
 }
