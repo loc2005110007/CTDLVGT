@@ -6,29 +6,29 @@ import java.text.SimpleDateFormat;
 
 public class DoDaDung {
     int id  ;
-    String name  ;
-    float price ;
+    String ten  ;
+    float gia ;
     Date date ;
-    int inventory ;
+    int HangTonKho ;
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/mm/yyyy"); 
 
     DoDaDung next ;
 
     DoDaDung(){}
 
-    DoDaDung(int _id , String _name , float _price ,int _inventory , Date _date){
+    DoDaDung(int _id , String _ten , float _gia ,int _HangTonKho , Date _date){
         id = _id ;
-        name = _name ;
-        price = _price ;
-        inventory = _inventory ;
+        ten = _ten ;
+        gia = _gia ;
+        HangTonKho = _HangTonKho ;
         date = _date;
     }
 
-    DoDaDung(int _id , String _name , float _price , int _inventory, String ngay){
+    DoDaDung(int _id , String _ten , float _gia , int _HangTonKho, String ngay){
         id = _id ;
-        name = _name ;
-        price = _price ;
-        inventory=_inventory ;
+        ten = _ten ;
+        gia = _gia ;
+        HangTonKho=_HangTonKho ;
         try {
             date = simpleDateFormat.parse(ngay);
 
@@ -39,24 +39,24 @@ public class DoDaDung {
 
     public void inThongTin(){
         System.out.println("===");
-        System.out.println("Hang Hoa: DoDaDung"+". Ten San Pham : "+name+". ID : "+id+". Gia : "+price+". Hang Ton Kho: "+inventory+". Ngay Nhap : "+date);
+        System.out.println("Hang Hoa: DoDaDung"+". Ten San Pham : "+ten+". ID : "+id+". Gia : "+gia+". Hang Ton Kho: "+HangTonKho+". Ngay Nhap : "+date);
     }
 
     public void nhapThongTin(Scanner input){
         input.nextLine();
         System.out.print("Hay nhap ten san pham : ");
-        name = input.nextLine();
+        ten = input.nextLine();
         System.out.print("hay nhap gia san pham : ");
-        price = input.nextFloat();
+        gia = input.nextFloat();
         System.out.println("Hay nhap so luong vao kho");
-        inventory = input.nextInt();
+        HangTonKho = input.nextInt();
         date = new Date();
         
     }
 
-    public String GetName() {
-		System.out.println(name);
-		return name;
+    public String Getten() {
+		System.out.println(ten);
+		return ten;
 	}
 
     

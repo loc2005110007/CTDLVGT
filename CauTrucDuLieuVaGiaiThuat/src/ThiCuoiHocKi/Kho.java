@@ -202,17 +202,17 @@ public class Kho {
 			input.nextLine();
 			String tenCanXoa = input.nextLine();
 
-            if (headPhuongTien.name.equalsIgnoreCase(tenCanXoa)) {
+            if (headPhuongTien.ten.equalsIgnoreCase(tenCanXoa)) {
                 headPhuongTien = headPhuongTien.next;
                 return;
             }
 
-            if (headDoDaDung.name.equalsIgnoreCase(tenCanXoa)) {
+            if (headDoDaDung.ten.equalsIgnoreCase(tenCanXoa)) {
                 headDoDaDung = headDoDaDung.next;
                 return;
             }
 
-            if (headThucPham.name.equalsIgnoreCase(tenCanXoa)) {
+            if (headThucPham.ten.equalsIgnoreCase(tenCanXoa)) {
                 headThucPham = headThucPham.next;
                 return;
             }
@@ -222,7 +222,7 @@ public class Kho {
             ThucPham currentThucPham = headThucPham ;
 
             while (currentPhuongTien.next != null) {
-                if (currentPhuongTien.next.name.equalsIgnoreCase(tenCanXoa)) {
+                if (currentPhuongTien.next.ten.equalsIgnoreCase(tenCanXoa)) {
                     currentPhuongTien.next =currentPhuongTien.next.next ;
                     System.out.println("Xoa thanh cong");
                     return ;
@@ -231,7 +231,7 @@ public class Kho {
             }
 
             while (currentDoDaDung.next != null) {
-                if (currentDoDaDung.next.name.equalsIgnoreCase(tenCanXoa)) {
+                if (currentDoDaDung.next.ten.equalsIgnoreCase(tenCanXoa)) {
                     currentDoDaDung.next =currentDoDaDung.next.next ;
                     System.out.println("Xoa thanh cong");
                     return ; 
@@ -240,7 +240,7 @@ public class Kho {
             }
 
             while (currentThucPham.next != null) {
-                if (currentThucPham.next.name.equalsIgnoreCase(tenCanXoa)) {
+                if (currentThucPham.next.ten.equalsIgnoreCase(tenCanXoa)) {
                     currentThucPham.next =currentThucPham.next.next ;
                     System.out.println("Successful delete.");
                     return ;
@@ -254,17 +254,17 @@ public class Kho {
             System.out.print("Nhap Gia Hang Can Xoa");
 			int giaCanXoa = input.nextInt();
 
-            if (headPhuongTien.price == giaCanXoa) {
+            if (headPhuongTien.gia == giaCanXoa) {
                 headPhuongTien = headPhuongTien.next ;
                 return ;
             }
 
-            if (headDoDaDung.price == giaCanXoa) {
+            if (headDoDaDung.gia == giaCanXoa) {
                 headDoDaDung = headDoDaDung.next ;
                 return;
             }
 
-            if (headThucPham.price == giaCanXoa) {
+            if (headThucPham.gia == giaCanXoa) {
                 headThucPham = headThucPham.next ;
                 return;
             }
@@ -274,7 +274,7 @@ public class Kho {
             ThucPham currentThucPham = headThucPham ;
 
             while ( curentPhuongTien.next != null){
-                if (curentPhuongTien.next.price == giaCanXoa) {
+                if (curentPhuongTien.next.gia == giaCanXoa) {
                     curentPhuongTien.next = curentPhuongTien.next.next;
                     System.out.println("Xoa thanh cong");
                     return;
@@ -283,7 +283,7 @@ public class Kho {
             }
 
             while ( currentDoDaDung.next != null){
-                if (currentDoDaDung.next.price == giaCanXoa) {
+                if (currentDoDaDung.next.gia == giaCanXoa) {
                     currentDoDaDung.next = currentDoDaDung.next.next;
                     System.out.println("Xoa thanh cong");
                     return;
@@ -292,7 +292,7 @@ public class Kho {
             }
 
             while ( currentThucPham.next != null){
-                if (currentThucPham.next.price == giaCanXoa) {
+                if (currentThucPham.next.gia == giaCanXoa) {
                     currentThucPham.next = currentThucPham.next.next;
                     System.out.println("Xoa thanh cong");
                     return;
@@ -340,21 +340,21 @@ public class Kho {
 			ThucPham currentThucPham = headThucPham;
 			
 			while (currentPhuongTien != null) {
-				if (currentPhuongTien.price >= start && currentPhuongTien.price <= end)
+				if (currentPhuongTien.gia >= start && currentPhuongTien.gia <= end)
 					currentPhuongTien.inThongTin();
 				currentPhuongTien = currentPhuongTien.next;
 			}
 			System.out.println();
 			
 			while (currentDoDaDung != null) {
-				if (currentDoDaDung.price >= start && currentDoDaDung.price <= end)
+				if (currentDoDaDung.gia >= start && currentDoDaDung.gia <= end)
 					currentDoDaDung.inThongTin();
 				currentDoDaDung = currentDoDaDung.next;
 			}
 			System.out.println();
 			
 			while (currentThucPham != null) {
-				if (currentThucPham.price >= start && currentThucPham.price <= end)
+				if (currentThucPham.gia >= start && currentThucPham.gia <= end)
 					currentThucPham.inThongTin();
 				currentThucPham = currentThucPham.next;
 			}
@@ -444,19 +444,19 @@ public class Kho {
 		
 		while (currentPhuongTien != null) {
 			tongSLPhuongTien++;
-			tongGiaTriPhuongTien += currentPhuongTien.price;
+			tongGiaTriPhuongTien += currentPhuongTien.gia;
 			currentPhuongTien = currentPhuongTien.next;
 		}
 		
 		while (currentDoDaDung != null) {
 			tongSLDoDaDung++;
-			tongGiaTriDoDaDung += currentDoDaDung.price;
+			tongGiaTriDoDaDung += currentDoDaDung.gia;
 			currentDoDaDung = currentDoDaDung.next;
 		}
 		
 		while (currentThucPham != null) {
 			tongSLThucPham++;
-			tongGiaTriThucPham += currentThucPham.price;
+			tongGiaTriThucPham += currentThucPham.gia;
 			currentThucPham = currentThucPham.next;
 		}
 		
@@ -472,7 +472,7 @@ public class Kho {
 		
     }
 
-    public void sortUpPrice(){
+    public void sortUpgia(){
 
     }
     public void fixByType(Scanner input){
@@ -486,9 +486,9 @@ public class Kho {
 				if (currentPhuongTien.id == id) {
 					currentPhuongTien.inThongTin();
 					System.out.println("Please correct the information.");
-					System.out.print("Product Name: "); input.nextLine(); currentPhuongTien.name = input.nextLine();
+					System.out.print("Product ten: "); input.nextLine(); currentPhuongTien.ten = input.nextLine();
 					System.out.print("ID: ");	currentPhuongTien.id = input.nextInt();
-					System.out.print("Product Price: "); currentPhuongTien.price = input.nextFloat();
+					System.out.print("Product gia: "); currentPhuongTien.gia = input.nextFloat();
 					System.out.print("Enter the date according to the form (dd-MM-yyyy): ");
 					
 					Date b = null;
@@ -510,9 +510,9 @@ public class Kho {
 				if (currentDoDaDung.id == id) {
 					currentDoDaDung.inThongTin();
 					System.out.println("Please correct the information.");
-					System.out.print("Product Name: "); input.nextLine(); currentDoDaDung.name = input.nextLine();
+					System.out.print("Product ten: "); input.nextLine(); currentDoDaDung.ten = input.nextLine();
 					System.out.print("ID: ");	currentDoDaDung.id = input.nextInt();
-					System.out.print("Product Price: "); currentDoDaDung.price = input.nextFloat();
+					System.out.print("Product gia: "); currentDoDaDung.gia = input.nextFloat();
 					System.out.print("Enter the date according to the form (dd-MM-yyyy): ");
 					
 					Date b = null;
@@ -534,9 +534,9 @@ public class Kho {
 				if (currentThucPham.id == id) {
 					currentThucPham.inThongTin();
 					System.out.println("Please correct the information.");
-					System.out.print("Product Name: "); input.nextLine(); currentThucPham.name = input.nextLine();
+					System.out.print("Product ten: "); input.nextLine(); currentThucPham.ten = input.nextLine();
 					System.out.print("ID: ");	currentThucPham.id = input.nextInt();
-					System.out.print("Product Price: "); currentThucPham.price = input.nextFloat();
+					System.out.print("Product gia: "); currentThucPham.gia = input.nextFloat();
 					System.out.print("Enter the date according to the form (dd-MM-yyyy): ");
 					
 					Date b = null;
