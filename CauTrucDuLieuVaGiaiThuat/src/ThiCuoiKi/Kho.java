@@ -1,5 +1,4 @@
-package ThiCuoiHocKi;
-
+package ThiCuoiKi;
 import java.util.Scanner;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -555,6 +554,10 @@ public class Kho {
 			}
     }
 }
+
+
+    
+
 
 
     

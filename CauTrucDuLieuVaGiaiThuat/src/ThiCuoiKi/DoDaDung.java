@@ -1,21 +1,22 @@
-package ThiCuoiHocKi;
+package ThiCuoiKi;
+
 import java.util.Date;
 import java.util.Scanner;
 import java.text.SimpleDateFormat;
-public class ThucPham {
+
+public class DoDaDung {
     int id  ;
     String ten  ;
     float gia ;
     Date date ;
-    int HangTonKho;
-
+    int HangTonKho ;
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/mm/yyyy"); 
 
-    ThucPham next ;
+    DoDaDung next ;
 
-    ThucPham(){}
+    DoDaDung(){}
 
-    ThucPham(int _id , String _ten , float _gia ,int _HangTonKho, Date _date){
+    DoDaDung(int _id , String _ten , float _gia ,int _HangTonKho , Date _date){
         id = _id ;
         ten = _ten ;
         gia = _gia ;
@@ -23,7 +24,7 @@ public class ThucPham {
         date = _date;
     }
 
-    ThucPham(int _id , String _ten , float _gia , int _HangTonKho, String ngay){
+    DoDaDung(int _id , String _ten , float _gia , int _HangTonKho, String ngay){
         id = _id ;
         ten = _ten ;
         gia = _gia ;
@@ -33,36 +34,31 @@ public class ThucPham {
 
         } catch (Exception e) {
         }
-        Date a = date;
+        Date aDate = date;
     }
 
     public void inThongTin(){
-        System.out.println("---");
-        System.out.println("Hang Hoa : ThucPham"+". Ten San Pham : "+ten+". ID : "+id+". Gia : "+gia+" Hang Ton Kho: "+HangTonKho+". Ngay Nhap : "+date);
+        System.out.println("===");
+        System.out.println("Hang Hoa: DoDaDung"+". Ten San Pham : "+ten+". ID : "+id+". Gia : "+gia+". Hang Ton Kho: "+HangTonKho+". Ngay Nhap : "+date);
     }
 
     public void nhapThongTin(Scanner input){
         input.nextLine();
-        System.out.print("Nhap Ten San Pham: ");
+        System.out.print("Hay nhap ten san pham : ");
         ten = input.nextLine();
-        System.out.print("Nhap Gia San Pham : ");
+        System.out.print("hay nhap gia san pham : ");
         gia = input.nextFloat();
-        System.out.println("Nhap so luong kho : ");
+        System.out.println("Hay nhap so luong vao kho");
         HangTonKho = input.nextInt();
         date = new Date();
         
     }
+
     public String Getten() {
 		System.out.println(ten);
 		return ten;
 	}
+
+    
 }
-
-
-
-    
-
-
-
-    
 

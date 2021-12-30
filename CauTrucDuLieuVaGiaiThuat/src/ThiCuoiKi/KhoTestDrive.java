@@ -1,5 +1,4 @@
-package ThiCuoiHocKi;
-
+package ThiCuoiKi;
 
 import java.util.Scanner;
 public class  KhoTestDrive{
@@ -184,6 +183,10 @@ public class  KhoTestDrive{
 
 
     
+
+
+    
+
 
 
     

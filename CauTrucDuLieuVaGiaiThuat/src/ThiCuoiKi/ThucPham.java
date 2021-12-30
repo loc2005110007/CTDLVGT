@@ -1,34 +1,33 @@
-package ThiCuoiHocKi;
-
+package ThiCuoiKi;
 import java.util.Date;
 import java.util.Scanner;
 import java.text.SimpleDateFormat;
-public class PhuongTien {
+public class ThucPham {
     int id  ;
     String ten  ;
-    float gia ; 
-    Date date ; 
+    float gia ;
+    Date date ;
     int HangTonKho;
 
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/mm/yyyy"); 
 
-    PhuongTien next ;
-    
+    ThucPham next ;
 
-    PhuongTien(){}
+    ThucPham(){}
 
-    PhuongTien(int _id , String _ten , float _gia , int _HangTonKho ,Date _date){
+    ThucPham(int _id , String _ten , float _gia ,int _HangTonKho, Date _date){
         id = _id ;
         ten = _ten ;
         gia = _gia ;
         HangTonKho = _HangTonKho ;
         date = _date;
     }
-    PhuongTien(int _id , String _ten , float _gia , int _HangTonKho, String ngay){
+
+    ThucPham(int _id , String _ten , float _gia , int _HangTonKho, String ngay){
         id = _id ;
         ten = _ten ;
         gia = _gia ;
-        HangTonKho =_HangTonKho ;
+        HangTonKho=_HangTonKho ;
         try {
             date = simpleDateFormat.parse(ngay);
 
@@ -36,23 +35,23 @@ public class PhuongTien {
         }
         Date a = date;
     }
+
     public void inThongTin(){
         System.out.println("---");
-        System.out.println("Hang Hoa : PhuongTien"+". Ten San Pham : "+ten+". ID : "+id+". Gia : "+gia+". Hang Ton Kho: "+HangTonKho+". Ngay Nhap : "+date);
+        System.out.println("Hang Hoa : ThucPham"+". Ten San Pham : "+ten+". ID : "+id+". Gia : "+gia+" Hang Ton Kho: "+HangTonKho+". Ngay Nhap : "+date);
     }
 
     public void nhapThongTin(Scanner input){
         input.nextLine();
-        System.out.print("Nhap Ten San Pham : ");
+        System.out.print("Nhap Ten San Pham: ");
         ten = input.nextLine();
-        System.out.print("Nhap Gia San Pham: ");
+        System.out.print("Nhap Gia San Pham : ");
         gia = input.nextFloat();
-        System.out.println("Nhap so luong kho :");
+        System.out.println("Nhap so luong kho : ");
         HangTonKho = input.nextInt();
         date = new Date();
         
     }
-
     public String Getten() {
 		System.out.println(ten);
 		return ten;
@@ -60,8 +59,13 @@ public class PhuongTien {
 }
 
 
+
     
 
 
+
     
+
+
+
 
