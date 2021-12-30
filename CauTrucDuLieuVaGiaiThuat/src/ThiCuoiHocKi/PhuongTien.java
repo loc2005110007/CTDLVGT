@@ -1,34 +1,34 @@
-package com.locnv2005110007.tieuLuanCuoiKi.CrockerySet;
+package ThiCuoiHocKi;
 
 import java.util.Date;
 import java.util.Scanner;
 import java.text.SimpleDateFormat;
-
-public class CrockerySet {
+public class PhuongTien {
     int id  ;
     String name  ;
-    float price ;
-    Date date ;
-    int inventory ;
+    float price ; 
+    Date date ; 
+    int inventory;
+
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/mm/yyyy"); 
 
-    CrockerySet next ;
+    PhuongTien next ;
+    
 
-    CrockerySet(){}
+    PhuongTien(){}
 
-    CrockerySet(int _id , String _name , float _price ,int _inventory , Date _date){
+    PhuongTien(int _id , String _name , float _price , int _inventory ,Date _date){
         id = _id ;
         name = _name ;
         price = _price ;
         inventory = _inventory ;
         date = _date;
     }
-
-    CrockerySet(int _id , String _name , float _price , int _inventory, String ngay){
+    PhuongTien(int _id , String _name , float _price , int _inventory, String ngay){
         id = _id ;
         name = _name ;
         price = _price ;
-        inventory=_inventory ;
+        inventory =_inventory ;
         try {
             date = simpleDateFormat.parse(ngay);
 
@@ -36,18 +36,19 @@ public class CrockerySet {
         }
         Date a = date;
     }
-
     public void inThongTin(){
         System.out.println("---");
-        System.out.println("Commodities: CrockerySet"+". Product's name : "+name+". ID : "+id+". Price : "+price+". Inventory: "+inventory+". Input Day : "+date);
+        System.out.println("Hang Hoa : PhuongTien"+". Ten San Pham : "+name+". ID : "+id+". Gia : "+price+". Hang Ton Kho: "+inventory+". Ngay Nhap : "+date);
     }
 
     public void nhapThongTin(Scanner input){
         input.nextLine();
-        System.out.print("Nhập tên sản phẩm : ");
+        System.out.print("Nhap Ten San Pham : ");
         name = input.nextLine();
-        System.out.print("Nhập vào giá sản phẩm : ");
+        System.out.print("Nhap Gia San Pham: ");
         price = input.nextFloat();
+        System.out.println("Nhap so luong kho :");
+        inventory = input.nextInt();
         date = new Date();
         
     }
@@ -56,6 +57,11 @@ public class CrockerySet {
 		System.out.println(name);
 		return name;
 	}
+}
+
 
     
-}
+
+
+    
+
