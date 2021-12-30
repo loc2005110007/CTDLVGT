@@ -39,16 +39,16 @@ public class PhuongTien {
     }
     public void inThongTin(){
         System.out.println("---");
-        System.out.println("Commodities : PhuongTien"+". Product's name : "+name+". ID : "+id+". Price : "+price+". Inventory: "+inventory+". Input Day : "+date);
+        System.out.println("Hang Hoa : PhuongTien"+". Ten San Pham : "+name+". ID : "+id+". Gia : "+price+". Hang Ton Kho: "+inventory+". Ngay Nhap : "+date);
     }
 
     public void nhapThongTin(Scanner input){
         input.nextLine();
-        System.out.print("Nhập tên sản phẩm : ");
+        System.out.print("Nhap Ten San Pham : ");
         name = input.nextLine();
-        System.out.print("Nhập vào giá sản phẩm : ");
+        System.out.print("Nhap Gia San Pham: ");
         price = input.nextFloat();
-        System.out.println("Nhap so luong kho");
+        System.out.println("Nhap so luong kho :");
         inventory = input.nextInt();
         date = new Date();
         

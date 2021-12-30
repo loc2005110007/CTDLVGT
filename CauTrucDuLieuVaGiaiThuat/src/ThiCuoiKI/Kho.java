@@ -22,9 +22,10 @@ public class Kho {
     
     public void add(Scanner input){
         System.out.println("ban muon them mat hang nao?");
-		System.out.print("1) PhuongTien	 2) Do Da Dung 3) ThucPham ");
-    
-        System.out.print("- Enter the selection : ");
+		System.out.print("1) PhuongTien");
+        System.out.println("2) Do Da Dung");
+        System.out.println("3) ThucPham");
+        System.out.print("Nhap Lua Chon: ");
 		int chose  = input.nextInt();
         if(chose <= 3){
         
@@ -70,19 +71,19 @@ public class Kho {
             }
         }
         }else 
-             System.out.println("Bạn chọn sai r");
+             System.out.println("Ban da chon sai!!!");
 
     }
 
     public int NhapId(Scanner input , int chose){
-        System.out.print("Hãy nhập ID hàng: ");
+        System.out.print("hay nhap id san pham: ");
 		int id = input.nextInt();
 
         if(chose == 1){
             PhuongTien current = headPhuongTien ;
             while(current != null){
                if(current.id == id){
-                System.out.println("Id này đã tồn tại");
+                System.out.println("Id nay da ton tai!!!");
                 return NhapId(input, chose);
                }
                current = current.next;
@@ -92,7 +93,7 @@ public class Kho {
             DoDaDung current = headDoDaDung ;
             while(current != null){
                if(current.id == id){
-                System.out.println("Id này đã tồn tại");
+                System.out.println("Id nay da ton tai!!!");
                 return NhapId(input, chose);
                }
                current = current.next;
@@ -102,7 +103,7 @@ public class Kho {
             ThucPham current = headThucPham ;
             while(current != null){
                if(current.id == id){
-                System.out.println("Id này đã tồn tại");
+                System.out.println("Id nay da ton tai!!!");
                 return NhapId(input, chose);
                }
                current = current.next;
@@ -138,13 +139,15 @@ public class Kho {
     }
 
     public void delecte(Scanner input){
-        System.out.println("Muốn xóa theo cách nào");
-		System.out.print("1) Theo Id	2) Theo tên	3) Theo giá ----> Lựa chọn: ");
-		
+        System.out.println("Ban Xoa theo phuong thuc nao ???");
+		System.out.print("1) Theo Id: ");
+		System.out.println("2) Theo ten:");
+        System.out.println("3) Theo gia ");
+        System.out.println(" ==>Lua chon:");
 		int chose = input.nextInt();
 
         if (chose == 1) {
-            System.out.print("Hãy nhập Id hàng cần xóa: ");
+            System.out.print("Nhap Id hang can xoa");
 			int idCanXoa = input.nextInt();
 
             if (headPhuongTien.id == idCanXoa) {
@@ -192,11 +195,11 @@ public class Kho {
                 }
                 currentThucPham = currentThucPham.next ;
             }
-            System.out.println("--- No find id.");
+            System.out.println("Khong Tim Thay ID.");
         }
 
         if (chose == 2 ) {
-            System.out.print("Hãy nhập tên hàng cần xóa: ");
+            System.out.print("Hay nhap ten hang can xoa: ");
 			input.nextLine();
 			String tenCanXoa = input.nextLine();
 
@@ -222,7 +225,7 @@ public class Kho {
             while (currentPhuongTien.next != null) {
                 if (currentPhuongTien.next.name.equalsIgnoreCase(tenCanXoa)) {
                     currentPhuongTien.next =currentPhuongTien.next.next ;
-                    System.out.println("Successful delete.");
+                    System.out.println("Xoa thanh cong");
                     return ;
                 }
                 currentPhuongTien = currentPhuongTien.next ;
@@ -231,7 +234,7 @@ public class Kho {
             while (currentDoDaDung.next != null) {
                 if (currentDoDaDung.next.name.equalsIgnoreCase(tenCanXoa)) {
                     currentDoDaDung.next =currentDoDaDung.next.next ;
-                    System.out.println("Successful delete.");
+                    System.out.println("Xoa thanh cong");
                     return ; 
                 }
                 currentDoDaDung = currentDoDaDung.next ;
@@ -245,11 +248,11 @@ public class Kho {
                 }
                 currentThucPham = currentThucPham.next ;
             }
-            System.out.println("--- No find name.");
+            System.out.println("Khong Tim Thay Ten");
         }
            
         if (chose == 3) {
-            System.out.print("Hãy nhập gia hàng cần xóa: ");
+            System.out.print("Nhap Gia Hang Can Xoa");
 			int giaCanXoa = input.nextInt();
 
             if (headPhuongTien.price == giaCanXoa) {
@@ -274,7 +277,7 @@ public class Kho {
             while ( curentPhuongTien.next != null){
                 if (curentPhuongTien.next.price == giaCanXoa) {
                     curentPhuongTien.next = curentPhuongTien.next.next;
-                    System.out.println("Successful delete.");
+                    System.out.println("Xoa thanh cong");
                     return;
                 }
                 curentPhuongTien = curentPhuongTien.next ;
@@ -283,7 +286,7 @@ public class Kho {
             while ( currentDoDaDung.next != null){
                 if (currentDoDaDung.next.price == giaCanXoa) {
                     currentDoDaDung.next = currentDoDaDung.next.next;
-                    System.out.println("Successful delete.");
+                    System.out.println("Xoa thanh cong");
                     return;
                 }
                 currentDoDaDung = currentDoDaDung.next ;
@@ -292,17 +295,17 @@ public class Kho {
             while ( currentThucPham.next != null){
                 if (currentThucPham.next.price == giaCanXoa) {
                     currentThucPham.next = currentThucPham.next.next;
-                    System.out.println("Successful delete.");
+                    System.out.println("Xoa thanh cong");
                     return;
                 }
                 currentThucPham = currentThucPham.next ;
             }
-            System.out.println("--- No find price.");
+            System.out.println("khong tim Thay Gia");
         }
     }
     
     public void timHangTheoLoai(Scanner input){
-        System.out.println("\nHãy nhập Loại hàng bạn muốn tìm");
+        System.out.println("\nHay Nhap Loai Hang Ban Muon Tim");
         System.out.print("1) Điện máy	2) Sành sứ	3) Thực phẩm ----> Lựa chọn: ");
         int loaiHang = input.nextInt();
 
@@ -359,7 +362,7 @@ public class Kho {
     }
 
     public void timHangtheoNgay(Scanner input){
-        System.out.println("Hãy nhập khoảng ngày nhập kho sản phẩm bạn muốn tìm (dd-MM-yyyy)\nTừ ngày: ");
+        System.out.println("Nhap Khoang Ngay Nhap Kho San Pham (dd-MM-yyyy)\nTu Ngay: ");
 			input.nextLine();
 			String date = input.nextLine();
 			

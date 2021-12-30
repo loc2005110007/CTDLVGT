@@ -38,17 +38,17 @@ public class DoDaDung {
     }
 
     public void inThongTin(){
-        System.out.println("---");
-        System.out.println("Commodities: DoDaDung"+". Product's name : "+name+". ID : "+id+". Price : "+price+". Inventory: "+inventory+". Input Day : "+date);
+        System.out.println("===");
+        System.out.println("Hang Hoa: DoDaDung"+". Ten San Pham : "+name+". ID : "+id+". Gia : "+price+". Hang Ton Kho: "+inventory+". Ngay Nhap : "+date);
     }
 
     public void nhapThongTin(Scanner input){
         input.nextLine();
-        System.out.print("Nhập tên sản phẩm : ");
+        System.out.print("Hay nhap ten san pham : ");
         name = input.nextLine();
-        System.out.print("Nhập vào giá sản phẩm : ");
+        System.out.print("hay nhap gia san pham : ");
         price = input.nextFloat();
-        System.out.println("Nhap so luong kho");
+        System.out.println("Hay nhap so luong vao kho");
         inventory = input.nextInt();
         date = new Date();
         
